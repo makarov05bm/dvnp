@@ -4,7 +4,7 @@
 A self-contained web security lab that simulates a multi-host NGINX reverse-proxy environment. It connects an attacker to multiple virtual hosts, backend Flask applications, and shared resources, providing a realistic environment for exploring chained web and reverse-proxy misconfigurations.
 <br/>
 <br/>
-<img width="1672" height="941" alt="187e8f86-2b3c-46f3-8795-263b9af31c52" src="https://github.com/user-attachments/assets/03988364-f010-46bc-8a04-d40b948bada8" />
+<img width="1672" height="941" alt="187e8f86-2b3c-46f3-8795-263b9af31c52" src="https://github.com/user-attachments/assets/351194cb-6cf0-44cf-b33c-dbe87e41eb06" />
 
 ## Lab Architecture
 <img width="1598" height="984" alt="c28b2cec-cc6c-4220-9168-167264b62b50" src="https://github.com/user-attachments/assets/977b0e5b-9a9b-4624-961f-c6b4d5d06461" />

@@ -1,0 +1,40 @@
+services:
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx/flask.conf:/etc/nginx/conf.d/flask.template
+      - ./user-data:/var/www/user-data:ro
+      - ./static-data:/var/www/static
+      - ./dev:/var/www/dev:ro
+      - ./.htpasswd:/etc/nginx/.htpasswd:ro
+      - nginx_logs:/var/log/nginx 
+    ports:
+      - '8090:80'
+    command: 'bash -c "cat /etc/nginx/conf.d/flask.template > /etc/nginx/conf.d/default.conf && nginx -g ''daemon off;''"'
+  flask:
+    image: tiangolo/uwsgi-nginx-flask:python3.8-alpine
+    user: root
+    working_dir: /home/flask/app
+    environment:
+      - STATIC_URL=/static
+      - STATIC_PATH=/home/flask/app/static
+      - FLASK_APP=app.py
+      - ./uploads:/home/flask/app/uploads 
+    volumes:
+      - ./app:/home/flask/app
+    command: 'flask run --port=7000 --host=0.0.0.0'
+  flask-2:
+    image: tiangolo/uwsgi-nginx-flask:python3.8-alpine
+    user: root
+    working_dir: /home/flask/app
+    environment:
+      - STATIC_URL=/static
+      - STATIC_PATH=/home/flask/app/static
+      - FLASK_APP=app.py
+    volumes:
+      - ./app-2:/home/flask/app
+      - nginx_logs:/var/log/nginx:ro
+    command: 'flask run --port=3000 --host=0.0.0.0'
+
+volumes:
+  nginx_logs:

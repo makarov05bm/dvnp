@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Skyblue Systems{% endblock %}</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">S</span>
+      <span class="brand-name">Skyblue Systems</span>
+    </div>
+    <nav class="topnav">
+      <a href="/">Home</a>
+      <a href="/en-us/changelog">Change Log</a>
+      <a href="/en-us/status">API Status</a>
+    </nav>
+  </header>
+
+  <main class="content {% block content_class %}{% endblock %}">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="footer">
+    <span>&copy; 2026 Skyblue Systems — internal lab environment</span>
+  </footer>
+
+  <script src="/static/js/main.js"></script>
+</body>
+
+</html>

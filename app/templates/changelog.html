@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Changelog &mdash; Skyblue Systems</title>
+<style>
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: #0b1a33;
+    color: #d8dee8;
+    font-family: Verdana, Geneva, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+
+  header {
+    border-bottom: 3px double #3a4d6e;
+    padding-bottom: 16px;
+    margin-bottom: 32px;
+  }
+
+  header h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 26px;
+    margin: 0 0 6px;
+    color: #f0f2f5;
+  }
+
+  header p {
+    margin: 0;
+    color: #9aa7bd;
+    font-size: 13px;
+  }
+
+  header a {
+    color: #7fb0e8;
+    text-decoration: none;
+  }
+
+  header a:hover {
+    text-decoration: underline;
+  }
+
+  .entry {
+    margin-bottom: 34px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #23324d;
+  }
+
+  .entry:last-of-type {
+    border-bottom: none;
+  }
+
+  .entry-head {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 4px;
+  }
+
+  .version {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px;
+    font-weight: bold;
+    color: #f0f2f5;
+  }
+
+  .date {
+    color: #6b7891;
+    font-size: 12.5px;
+  }
+
+  .summary {
+    color: #aab5c8;
+    font-size: 13px;
+    margin: 4px 0 12px;
+    font-style: italic;
+  }
+
+  ul.changes {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  ul.changes li {
+    padding: 3px 0 3px 0;
+    font-size: 13.5px;
+    color: #c3cad9;
+  }
+
+  .tag {
+    display: inline-block;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 0 4px;
+    margin-right: 6px;
+  }
+
+  .tag-added    { color: #5fc27a; }
+  .tag-fixed    { color: #6fa8dc; }
+  .tag-changed  { color: #d8ab4e; }
+  .tag-security { color: #e0685f; }
+  .tag-docs     { color: #8b96a8; }
+
+  footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid #23324d;
+    color: #6b7891;
+    font-size: 12px;
+  }
+
+  footer a {
+    color: #7fb0e8;
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  .disclaimer {
+    background: #12233f;
+    border: 1px solid #2c4266;
+    padding: 10px 14px;
+    font-size: 12.5px;
+    color: #9aa7bd;
+    margin-bottom: 30px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Skyblue Systems &mdash; Changelog</h1>
+    <p>Internal platform release notes. See <a href="./README.html">README</a> for setup.</p>
+  </header>
+
+  <div class="disclaimer">
+    Internal changelog. All hostnames, credentials, and data referenced here are
+    fictional or self-hosted within Skyblue's own environment.
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <span class="version">v1.0.0</span>
+      <span class="date">2026-08-08</span>
+    </div>
+    <p class="summary">General availability.</p>
+    <ul class="changes">
+      <li><span class="tag tag-added">[ADDED]</span> New internal admin panel for the portal, with session-based sign-in.</li>
+      <li><span class="tag tag-added">[ADDED]</span> Repo index and audit report pages on the internal docs site.</li>
+      <li><span class="tag tag-added">[ADDED]</span> Live log viewer for the ops team on the sandbox instance.</li>
+      <li><span class="tag tag-docs">[DOCS]</span> Published onboarding docs for new internal tooling.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <span class="version">v0.6.0</span>
+      <span class="date">2026-08-06</span>
+    </div>
+    <p class="summary">Account and session improvements.</p>
+    <ul class="changes">
+      <li><span class="tag tag-added">[ADDED]</span> Account session endpoint for the partner integrations team.</li>
+      <li><span class="tag tag-changed">[CHANGED]</span> Static asset delivery now cached for faster page loads.</li>
+      <li><span class="tag tag-fixed">[FIXED]</span> Minor caching inconsistencies on the assets pipeline.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <span class="version">v0.5.0</span>
+      <span class="date">2026-08-05</span>
+    </div>
+    <p class="summary">Storage and redirects.</p>
+    <ul class="changes">
+      <li><span class="tag tag-added">[ADDED]</span> Versioned asset delivery backed by cloud storage.</li>
+      <li><span class="tag tag-added">[ADDED]</span> Global asset redirects for the CDN migration.</li>
+      <li><span class="tag tag-changed">[CHANGED]</span> Internal routing helper for backend service calls, used by the platform team.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <span class="version">v0.4.0</span>
+      <span class="date">2026-08-04</span>
+    </div>
+    <p class="summary">Internal tooling.</p>
+    <ul class="changes">
+      <li><span class="tag tag-added">[ADDED]</span> Internal debug endpoint for the on-call rotation.</li>
+      <li><span class="tag tag-added">[ADDED]</span> Alternate portal entry point for legacy integrations.</li>
+      <li><span class="tag tag-added">[ADDED]</span> Proof-of-concept access rules for the new docs section.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <span class="version">v0.3.0</span>
+      <span class="date">2026-08-06</span>
+    </div>
+    <p class="summary">File handling.</p>
+    <ul class="changes">
+      <li><span class="tag tag-added">[ADDED]</span> File upload endpoint for reports and shared documents.</li>
+      <li><span class="tag tag-changed">[CHANGED]</span> Uploads now distinguish new files from updates to existing ones.</li>
+      <li><span class="tag tag-fixed">[FIXED]</span> Upload endpoint occasionally rejected valid update requests.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <span class="version">v0.2.0</span>
+      <span class="date">2026-08-03</span>
+    </div>
+    <p class="summary">Sandbox environment.</p>
+    <ul class="changes">
+      <li><span class="tag tag-added">[ADDED]</span> Sandbox instance for the platform team's local mirrors and build artifacts.</li>
+      <li><span class="tag tag-added">[ADDED]</span> Static file hosting for developer tooling.</li>
+      <li><span class="tag tag-added">[ADDED]</span> Basic server status page for monitoring.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <span class="version">v0.1.0</span>
+      <span class="date">2026-08-02</span>
+    </div>
+    <p class="summary">Initial release.</p>
+    <ul class="changes">
+      <li><span class="tag tag-added">[ADDED]</span> Core portal and reverse proxy setup.</li>
+      <li><span class="tag tag-added">[ADDED]</span> User data storage for account exports.</li>
+      <li><span class="tag tag-docs">[DOCS]</span> Initial internal documentation.</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>Skyblue Systems &middot; internal platform &middot;
+      <a href="./docs.html">docs</a> &middot;
+      <a href="./status.html">status</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}docs — internal-repo-01{% endblock %}
+{% block content %}
+<section class="panel">
+  <div class="panel-header">
+    <span class="badge badge-green">running</span>
+    <h1>API is running!</h1>
+  </div>
+  <p>Minimal status/doc page for this instance. Nothing fancy — just enough to confirm
+    the sync worker is alive and to point people at the audit export.</p>
+
+  <ul class="bullet-list">
+    <li><a href="/docs/audit-report">/docs/audit-report</a> — latest export</li>
+    <li><a href="/repo-list">/repo-list</a> — mirrored repo index (internal only)</li>
+    <li><a href="/dev-admin">/admin</a> — instance controls</li>
+  </ul>
+</section>
+{% endblock %}

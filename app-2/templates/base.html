@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}internal-repo-01{% endblock %}</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+  <div class="dev-banner">
+    ⚠ SANDBOX / DEV ENVIRONMENT — internal-repo-01.skyblue.local — not for production use
+  </div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-dot"></span>
+      <span class="brand-name">internal-repo-01</span>
+      <span class="brand-tag">temp instance</span>
+    </div>
+    <nav class="topnav">
+      <a href="/">home</a>
+      <a href="/docs">docs</a>
+      <a href="/repo-list">repos</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="footer">
+    <span>spun up by @jdev on 2026-05-14 · TODO: tear this down · uptime: it's been a while</span>
+  </footer>
+
+  <script src="/static/js/main.js"></script>
+</body>
+
+</html>

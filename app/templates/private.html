@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Private — Skyblue Systems{% endblock %}
+{% block content_class %}restricted{% endblock %}
+{% block content %}
+<section class="panel">
+  <div class="panel-header">
+    <span class="badge badge-amber">Private</span>
+    <h1>Private Area</h1>
+  </div>
+  <p>Employee-only workspace. Contents here are scoped to authenticated staff sessions only.</p>
+  <ul class="bullet-list">
+    <li>HR policy drafts (2026 revision)</li>
+    <li>Internal Slack export archive</li>
+    <li>Payroll adjustment requests</li>
+  </ul>
+</section>
+{% endblock %}

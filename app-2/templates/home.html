@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}internal-repo-01 — home{% endblock %}
+{% block content %}
+<section class="hero">
+  <h1>Internal Repository Home Page</h1>
+  <p class="subtitle">Quick access box for the platform team's local mirrors and build artifacts</p>
+  <p class="hero-text">
+    This box mirrors a few internal repos for faster CI checkouts and gives quick links
+    to build docs. Spun up as a temporary fix during the runner migration — please don't
+    depend on this staying up, and definitely don't point prod at it.
+  </p>
+
+  <div class="card-grid">
+    <a class="card" href="/docs">
+      <h3>docs/</h3>
+      <p>API status + build docs</p>
+    </a>
+    <a class="card" href="/docs/audit-report">
+      <h3>audit-report</h3>
+      <p>Download the latest audit export</p>
+    </a>
+    <a class="card" href="/repo-list">
+      <h3>repo-list</h3>
+      <p>Full mirrored repo index</p>
+    </a>
+    <a class="card" href="/admin">
+      <h3>admin</h3>
+      <p>Instance controls</p>
+    </a>
+  </div>
+</section>
+{% endblock %}

@@ -9,7 +9,7 @@ A self-contained web security lab that simulates a multi-host NGINX reverse-prox
 ## Lab Architecture
 <img width="1598" height="984" alt="c28b2cec-cc6c-4220-9168-167264b62b50" src="https://github.com/user-attachments/assets/977b0e5b-9a9b-4624-961f-c6b4d5d06461" />
 
-## Vulnerability Classes Covered
+## Misconfigurations / Exploit Chains Covered
 
 The lab chains together 20 independent findings, spanning:
 

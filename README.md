@@ -8,3 +8,20 @@ A self-contained web security lab that simulates a multi-host NGINX reverse-prox
 
 ## Lab Architecture
 <img width="1598" height="984" alt="a0e809bb-9900-4751-b5f9-3e494abbf6ac" src="https://github.com/user-attachments/assets/ce1f72a7-220a-429b-8e27-2656fa0c85aa" />
+
+## Lab Set Up
+```shell
+git clone https://github.com/makarov05bm/dvnp.git
+cd dvnp
+docker compose up --build --force-recreate --remove-orphans
+```
+
+**Verify all three vhosts are up:**
+```shell
+curl -I "http://portal.skyblue.com:8080/"
+curl -I "http://sandbox-dev-001.skyblue.com:8080/"
+curl -I "http://sandbox-dev-002.skyblue.com:8080/"
+```
+
+## Lab Solutions Guide
+You can find all documented findings explained from a black and white-box perspective at my blog: 

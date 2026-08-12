@@ -6,7 +6,6 @@ from werkzeug.middleware.proxy_fix import ProxyFix
 app = Flask(__name__)
 app.logger.setLevel(logging.INFO)
 UPLOAD_DIR = "uploads"
-DB_PATH = "uploads.db"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 # Extract remote_addr from X-Forwarded-For (skip 1 reverse proxy from the right)

@@ -13,6 +13,19 @@ A self-contained web security lab that simulates a multi-host NGINX reverse-prox
 ```shell
 git clone https://github.com/makarov05bm/dvnp.git
 cd dvnp
+```
+
+**Add the vhosts entries to `/etc/hosts` to use domain names instead of IP addresses:**
+```shell
+sudo nano /etc/host
+
+127.0.0.1 portal.skyblue.com
+127.0.0.1 sandbox-dev-001.skyblue.com
+127.0.0.1 sandbox-dev-002.skyblue.com
+```
+
+**Run the lab:**
+```shell
 docker compose up --build --force-recreate --remove-orphans
 ```
 

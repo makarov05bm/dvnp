@@ -1,8 +1,9 @@
 # dvnp
 
+## What is Damn Vulnerable NGINX Proxy?
 A self-contained web security lab that simulates a multi-host NGINX reverse-proxy environment. It connects an attacker to multiple virtual hosts, backend Flask applications, and shared resources, providing a realistic environment for exploring chained web and reverse-proxy misconfigurations.
-
-<img width="1672" height="941" alt="29312dfd-a338-46cc-a823-a641255393db" src="https://github.com/user-attachments/assets/f46fd356-b01e-438d-96d5-cf4d92c70f37" />
-<img width="1672" height="941" alt="b5a414aa-0d7b-493d-acdb-221014e960aa" src="https://github.com/user-attachments/assets/5723b71c-8341-478e-9704-7d0d89fa278b" />
+<br/>
 <img width="1672" height="941" alt="3970a670-ad30-4a55-89b0-f653b00d70fd" src="https://github.com/user-attachments/assets/ac3313e0-3f3b-4b53-b6a0-af4b0a3596d2" />
 
+## Lab Architecture
+<img width="1598" height="984" alt="a0e809bb-9900-4751-b5f9-3e494abbf6ac" src="https://github.com/user-attachments/assets/ce1f72a7-220a-429b-8e27-2656fa0c85aa" />

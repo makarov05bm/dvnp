@@ -72,9 +72,15 @@ I hope you enjoy working through the lab, then I want to see you go hunt those b
 
 ## References
 https://nginx.org/en/docs/dirindex.html
+
 https://snyk.io/blog/url-confusion-vulnerabilities/#slash
+
 https://blog.detectify.com/industry-insights/common-nginx-misconfigurations-that-leave-your-web-server-ope-to-attack/
+
 https://labs.detectify.com/ethical-hacking/middleware-middleware-everywhere-and-lots-of-misconfigurations-to-fix/
+
 https://hacktricks.wiki/en/network-services-pentesting/pentesting-web/nginx.html#http2-upstream-request-injection-with-proxy_set_body
+
 https://blog.bugport.net/exploiting-http-parsers-inconsistencies
+
 https://tolo7010note.blogspot.com/2020/07/an-unreproducable-bug-due-to-load.html

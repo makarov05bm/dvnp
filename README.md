@@ -41,4 +41,4 @@ You can find all documented findings explained from a black and white-box perspe
 
 ## Suggestion
 I welcome any suggestions or additions, fixes, etc. Feel free to open a PR, reach out to me for feedback, suggestions, questions...
-I hope you enjoy working through the lab, then I want to see you go hunt those boring NGINX servers that you were leaving for later :')
+I hope you enjoy working through the lab, then I want to see you go hunt those boring NGINX servers that you were leaving for later :)

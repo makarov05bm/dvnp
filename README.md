@@ -1,4 +1,4 @@
-# DVNP - Damn Vulnerable NGINX
+# DVNP
 
 ## What is Damn Vulnerable NGINX Proxy?
 A self-contained web security lab that simulates a multi-host NGINX reverse-proxy environment. It connects an attacker to multiple virtual hosts, backend Flask applications, and shared resources, providing a realistic environment for exploring chained web and reverse-proxy misconfigurations.

@@ -48,6 +48,7 @@ sudo nano /etc/host
 127.0.0.1 portal.skyblue.com
 127.0.0.1 sandbox-dev-001.skyblue.com
 127.0.0.1 sandbox-dev-002.skyblue.com
+127.0.0.1 compromised.skyblue.com
 ```
 
 **Run the lab:**

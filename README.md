@@ -99,3 +99,5 @@ https://hacktricks.wiki/en/network-services-pentesting/pentesting-web/nginx.html
 https://blog.bugport.net/exploiting-http-parsers-inconsistencies
 
 https://tolo7010note.blogspot.com/2020/07/an-unreproducable-bug-due-to-load.html
+
+https://securitylabs.datadoghq.com/articles/web-traffic-hijacking-nginx-configuration-malicious/

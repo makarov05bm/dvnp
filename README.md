@@ -62,6 +62,10 @@ docker compose up --build --force-recreate --remove-orphans
 - Running the HTTPS version
 ```shell
 cd dvnp-ssl
+
+sudo apt install mkcert 
+mkcert -cert-file ./nginx/ssl/skyblue.com.pem -key-file ./nginx/ssl/skyblue.com-key.pem skyblue.com
+
 docker compose up --build --force-recreate --remove-orphans
 ```
 

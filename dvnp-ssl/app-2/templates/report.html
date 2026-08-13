@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}audit-report — internal-repo-01{% endblock %}
+{% block content %}
+<section class="panel">
+  <div class="panel-header">
+    <span class="badge badge-amber">internal use</span>
+    <h1>Download Audit Report</h1>
+  </div>
+  <p>Latest audit export from the nightly sync job. Generated automatically —
+     don't forward outside the team.</p>
+
+  <div class="report-box">
+    <div class="report-row">
+      <span class="report-name">audit_export_2026-07-01.csv</span>
+      <span class="report-meta">2.1 MB · generated 2026-07-01 08:00</span>
+    </div>
+  </div>
+</section>
+{% endblock %}

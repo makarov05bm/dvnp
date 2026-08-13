@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}repo-list — internal-repo-01{% endblock %}
+{% block content %}
+<section class="panel">
+  <div class="panel-header">
+    <span class="badge badge-red">internal only</span>
+    <h1>Repo List</h1>
+  </div>
+  <p class="warn-text">Highly sensitive information — this page should be only accessible internally.</p>
+
+  <table class="log-table">
+    <thead>
+      <tr><th>repo</th><th>visibility</th><th>last sync</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>skyblue/core-api</td><td>private</td><td>2026-07-01</td></tr>
+      <tr><td>skyblue/payments-service</td><td>private</td><td>2026-07-01</td></tr>
+      <tr><td>skyblue/infra-terraform</td><td>private</td><td>2026-06-29</td></tr>
+      <tr><td>skyblue/customer-data-pipeline</td><td>private</td><td>2026-06-30</td></tr>
+      <tr><td>skyblue/internal-tools</td><td>private</td><td>2026-07-01</td></tr>
+    </tbody>
+  </table>
+</section>
+{% endblock %}

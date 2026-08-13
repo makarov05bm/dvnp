@@ -37,44 +37,30 @@ The lab chains together 20 independent findings, spanning:
 Some findings only become exploitable *because* of another misconfiguration elsewhere in the same config; part of the point of this lab is learning to spot those interaction effects, not just isolated bugs.
 
 ## Lab Set Up
-```
+```shell
 git clone https://github.com/makarov05bm/dvnp.git
+cd dvnp
 ```
 
 **Add the vhosts entries to `/etc/hosts` to use domain names instead of IP addresses:**
-```
+```shell
 sudo nano /etc/host
 
 127.0.0.1 portal.skyblue.com
 127.0.0.1 sandbox-dev-001.skyblue.com
 127.0.0.1 sandbox-dev-002.skyblue.com
-127.0.0.1 compromised.skyblue.com
 ```
 
 **Run the lab:**
-- Running the HTTP version
 ```shell
-cd dvnp-http
-docker compose up --build --force-recreate --remove-orphans
-```
-
-- Running the HTTPS version
-```shell
-cd dvnp-ssl
 docker compose up --build --force-recreate --remove-orphans
 ```
 
 **Verify all three vhosts are up:**
-```
+```shell
 curl -I "http://portal.skyblue.com:8090/"
 curl -I "http://sandbox-dev-001.skyblue.com:8090/"
 curl -I "http://sandbox-dev-002.skyblue.com:8090/"
-```
-OR if running the HTTPS version
-```
-curl -I "https://portal.skyblue.com:8090/"
-curl -I "https://sandbox-dev-001.skyblue.com:8090/"
-curl -I "https://sandbox-dev-002.skyblue.com:8090/"
 ```
 
 ## Lab Solutions Guide

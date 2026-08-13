@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}admin — internal-repo-01{% endblock %}
+{% block content %}
+<section class="panel">
+  <div class="panel-header">
+    <span class="badge badge-red">no auth wired up yet</span>
+    <h1>Admin Page</h1>
+  </div>
+  <p>Admin controls. Real auth was supposed to go here before this got
+    shared with the wider team — ping #platform-infra if you actually need this.</p>
+
+  <div class="mock-controls">
+    <div class="control-row"><span>Rebuild search index</span><button class="btn" type="button">Run</button></div>
+    <div class="control-row"><span>Clear local mirror cache</span><button class="btn" type="button">Run</button></div>
+    <div class="control-row"><span>Restart sync worker</span><button class="btn" type="button">Run</button></div>
+  </div>
+
+  <pre class="log-box">
+[2026-05-14 11:02:03] instance started (temp, migration fix)
+[2026-05-20 09:14:41] mirror sync: 41 repos ok, 2 skipped
+[2026-06-03 16:45:12] TODO left by jdev: "add auth before this goes wider"
+[2026-07-01 08:00:00] cron: nightly sync ok
+</pre>
+</section>
+{% endblock %}

@@ -1,0 +1,9 @@
+product_id,product_name,category,price_usd,in_stock
+P100,Meridian Starter Plan,Subscription,9.99,yes
+P101,Meridian Pro Plan,Subscription,29.99,yes
+P102,Meridian Enterprise Plan,Subscription,99.99,yes
+P103,Meridian API Add-on,Add-on,4.99,yes
+P104,Meridian Priority Support,Add-on,14.99,yes
+P105,Meridian Branded Mug,Merchandise,12.00,yes
+P106,Meridian Branded T-Shirt,Merchandise,18.00,no
+P107,Meridian Sticker Pack,Merchandise,3.50,yes

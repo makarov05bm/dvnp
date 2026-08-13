@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Admin Panel — Skyblue Systems{% endblock %}
+{% block content_class %}restricted{% endblock %}
+{% block content %}
+<section class="panel">
+  <div class="panel-header">
+    <span class="badge badge-red">Restricted</span>
+    <h1>Admin Panel</h1>
+  </div>
+  <p>Welcome back, administrator. From here you can manage users, review system logs, and configure integrations.</p>
+
+  <div class="admin-grid">
+    <div class="admin-widget">
+      <h4>Active Sessions</h4>
+      <p class="big-number">42</p>
+    </div>
+    <div class="admin-widget">
+      <h4>Pending Approvals</h4>
+      <p class="big-number">3</p>
+    </div>
+    <div class="admin-widget">
+      <h4>System Load</h4>
+      <p class="big-number">17%</p>
+    </div>
+  </div>
+
+  <table class="log-table">
+    <thead>
+      <tr>
+        <th>Timestamp</th>
+        <th>User</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>06:03:12</td>
+        <td>root</td>
+        <td>Rotated API keys</td>
+      </tr>
+      <tr>
+        <td>05:58:47</td>
+        <td>svc_backup</td>
+        <td>Exported customer_data.csv</td>
+      </tr>
+      <tr>
+        <td>05:41:03</td>
+        <td>admin</td>
+        <td>Updated firewall rules</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+{% endblock %}

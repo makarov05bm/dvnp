@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}API Status — Skyblue Systems{% endblock %}
+{% block content %}
+<section class="panel">
+  <div class="panel-header">
+    <span class="badge badge-green">Operational</span>
+    <h1>API Status</h1>
+  </div>
+  <div class="status-grid">
+    <div class="status-row"><span>API Gateway</span><span class="dot dot-green"></span></div>
+    <div class="status-row"><span>Auth service</span><span class="dot dot-green"></span></div>
+    <div class="status-row"><span>Reporting service</span><span class="dot dot-green"></span></div>
+    <div class="status-row"><span>File export service</span><span class="dot dot-green"></span></div>
+  </div>
+</section>
+<br />
+<div class="panel-header">
+  <h1>Latest Incidents</h1>
+</div>
+<div class="status-grid">
+  <div class="status-row"><a href="/preview-link?incident=1042"><span>Incident #1042 - Elevated error rates on API
+        Gateway</span></a></div>
+  <div class="status-row"><a href="/preview-link?incident=1041"><span>Incident #1041 - Increased latency on Reporting
+        Service</span></a></div>
+</div>
+</section>
+{% endblock %}

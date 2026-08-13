@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Skyblue Systems — Home{% endblock %}
+{% block content %}
+<section class="hero">
+  <h1>Welcome to Skyblue Systems</h1>
+  <p class="subtitle">Infrastructure Status Public Portal</p>
+  <p class="hero-text">Real-time status information for Skyblue Systems services and infrastructure.</p>
+  <div class="card-grid">
+    <a class="card" href="/en-us/status">
+      <h3>API Status</h3>
+      <p>Check whether backend services are online.</p>
+    </a>
+    <a class="card" href="/download?file=product_list_2026.csv">
+      <h3>Reports</h3>
+      <p>Download shared data exports.</p>
+    </a>
+  </div>
+</section>
+{% endblock %}

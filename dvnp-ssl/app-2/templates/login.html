@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}login — internal-repo-01{% endblock %}
+{% block content %}
+<section class="panel" style="max-width: 380px; margin: 40px auto;">
+    <div class="panel-header">
+        <span class="badge badge-amber">admin only</span>
+        <h1>Sign in</h1>
+    </div>
+
+    <form id="login-form">
+        <div style="margin-bottom: 14px;">
+            <label style="display:block; font-size:0.78rem; color:var(--text-dim); margin-bottom:4px;">username</label>
+            <input type="text" id="username" name="username" autocomplete="username"
+                style="width:100%; padding:8px; background:var(--panel-alt); border:1px solid black; border-radius:4px; color:black; font-family:inherit;">
+        </div>
+        <div style="margin-bottom: 18px;">
+            <label style="display:block; font-size:0.78rem; color:var(--text-dim); margin-bottom:4px;">password</label>
+            <input type="password" id="password" name="password" autocomplete="current-password"
+                style="width:100%; padding:8px; background:var(--panel-alt); border:1px solid black; border-radius:4px; color:black; font-family:inherit;">
+        </div>
+        <button type="submit" class="btn" style="width:100%; padding:9px;">Sign in</button>
+        <p id="login-error" style="color:var(--red); font-size:0.78rem; margin-top:10px; display:none;">
+            Invalid username or password.
+        </p>
+    </form>
+</section>
+
+<script>
+    document.getElementById('login-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const errorEl = document.getElementById('login-error');
+        errorEl.style.display = 'none';
+
+        try {
+            const res = await fetch('/v1/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username, password })
+            });
+
+            if (!res.ok) {
+                errorEl.style.display = 'block';
+                return;
+            }
+
+            const data = await res.json();
+            localStorage.setItem('admin_token', data.token);
+            window.location.href = '/ssh_keys';
+        } catch (err) {
+            errorEl.textContent = 'Something went wrong. Try again.';
+            errorEl.style.display = 'block';
+        }
+    });
+</script>
+{% endblock %}

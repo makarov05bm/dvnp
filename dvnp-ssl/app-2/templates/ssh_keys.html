@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}ssh keys — internal-repo-01{% endblock %}
+{% block content %}
+<section class="panel">
+    <div class="panel-header">
+        <span class="badge badge-red">internal only</span>
+        <h1>SSH Keys</h1>
+    </div>
+    <p class="warn-text">Deploy and jump-host keys. Do not copy these outside the ops rotation.</p>
+
+    <div id="keys-container">
+        <p style="color: var(--text-dim); font-size: 0.85rem;">Loading...</p>
+    </div>
+</section>
+
+<script>
+    (async () => {
+        const token = localStorage.getItem('admin_token');
+        const container = document.getElementById('keys-container');
+
+        if (!token) {
+            window.location.href = '/v1/login';
+            return;
+        }
+
+        try {
+            const res = await fetch('/api/ssh_keys', {
+                headers: { 'Authorization': 'Bearer ' + token }
+            });
+
+            if (res.status === 401) {
+                localStorage.removeItem('admin_token');
+                window.location.href = '/v1/login';
+                return;
+            }
+
+            const data = await res.json();
+            container.innerHTML = '';
+
+            data.keys.forEach(key => {
+                const box = document.createElement('div');
+                box.className = 'log-box';
+                box.style.marginBottom = '16px';
+                box.innerHTML =
+                    '<div style="color: var(--accent); font-size: 0.8rem; margin-bottom: 6px;">' +
+                    key.name + ' &middot; ' + key.type + '</div>' +
+                    '<pre style="margin:0; white-space:pre-wrap; word-break:break-all;">' +
+                    key.content + '</pre>';
+                container.appendChild(box);
+            });
+        } catch (err) {
+            container.innerHTML = '<p style="color: var(--red);">Failed to load keys.</p>';
+        }
+    })();
+</script>
+{% endblock %}

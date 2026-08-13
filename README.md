@@ -72,9 +72,9 @@ curl -I "http://sandbox-dev-002.skyblue.com:8090/"
 ```
 OR if running the HTTPS version
 ```
-curl -I "https://portal.skyblue.com:8090/"
-curl -I "https://sandbox-dev-001.skyblue.com:8090/"
-curl -I "https://sandbox-dev-002.skyblue.com:8090/"
+curl -I -k "https://portal.skyblue.com:8090/"
+curl -I -k "https://sandbox-dev-001.skyblue.com:8090/"
+curl -I -k "https://sandbox-dev-002.skyblue.com:8090/"
 ```
 
 ## Lab Solutions Guide

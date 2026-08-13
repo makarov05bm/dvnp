@@ -39,7 +39,6 @@ Some findings only become exploitable *because* of another misconfiguration else
 ## Lab Set Up
 ```shell
 git clone https://github.com/makarov05bm/dvnp.git
-cd dvnp
 ```
 
 **Add the vhosts entries to `/etc/hosts` to use domain names instead of IP addresses:**
@@ -52,7 +51,15 @@ sudo nano /etc/host
 ```
 
 **Run the lab:**
+- Running the HTTP version
 ```shell
+cd dvnp
+docker compose up --build --force-recreate --remove-orphans
+```
+
+- Running the HTTPS version
+```shell
+cd dvnp-https
 docker compose up --build --force-recreate --remove-orphans
 ```
 
@@ -61,6 +68,11 @@ docker compose up --build --force-recreate --remove-orphans
 curl -I "http://portal.skyblue.com:8090/"
 curl -I "http://sandbox-dev-001.skyblue.com:8090/"
 curl -I "http://sandbox-dev-002.skyblue.com:8090/"
+
+OR if running the HTTPS version
+curl -I "https://portal.skyblue.com:8090/"
+curl -I "https://sandbox-dev-001.skyblue.com:8090/"
+curl -I "https://sandbox-dev-002.skyblue.com:8090/"
 ```
 
 ## Lab Solutions Guide

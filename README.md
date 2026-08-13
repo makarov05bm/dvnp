@@ -53,13 +53,13 @@ sudo nano /etc/host
 **Run the lab:**
 - Running the HTTP version
 ```shell
-cd dvnp
+cd dvnp-http
 docker compose up --build --force-recreate --remove-orphans
 ```
 
 - Running the HTTPS version
 ```shell
-cd dvnp-https
+cd dvnp-ssl
 docker compose up --build --force-recreate --remove-orphans
 ```
 

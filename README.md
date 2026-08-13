@@ -11,7 +11,7 @@ A self-contained web security lab that simulates a multi-host NGINX reverse-prox
 
 ## Misconfigurations / Exploit Chains Covered
 
-The lab chains together 20 independent findings, spanning:
+The lab chains together 20+ independent findings, spanning:
 
 1. Authorization Bypass via a Permissive Alternate Root
 2. Broken Access Control via Trim Inconsistencies

@@ -10,10 +10,12 @@ services:
       - ./nginx/attacker:/var/www/attacker:ro
       - ./nginx/ssl:/etc/ssl/certs:ro
       - ./.htpasswd:/etc/nginx/.htpasswd:ro
-      - nginx_logs:/var/log/nginx 
+      - nginx_logs:/var/log/nginx
     ports:
       - '8090:443'
     command: 'bash -c "cat /etc/nginx/conf.d/flask.template > /etc/nginx/conf.d/default.conf && nginx -g ''daemon off;''"'
+    depends_on:
+      - billing
   flask:
     image: tiangolo/uwsgi-nginx-flask:python3.8-alpine
     user: root
@@ -22,7 +24,7 @@ services:
       - STATIC_URL=/static
       - STATIC_PATH=/home/flask/app/static
       - FLASK_APP=app.py
-      - ./uploads:/home/flask/app/uploads 
+      - ./uploads:/home/flask/app/uploads
     volumes:
       - ./app:/home/flask/app
     command: 'flask run --port=7000 --host=0.0.0.0'
@@ -38,6 +40,11 @@ services:
       - ./app-2:/home/flask/app
       - nginx_logs:/var/log/nginx:ro
     command: 'flask run --port=3000 --host=0.0.0.0'
+  billing:
+    build: ./h2c-backend
+    container_name: dvnp-internal-billing
+    expose:
+      - "9999"
 
 volumes:
   nginx_logs:

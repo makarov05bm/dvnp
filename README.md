@@ -7,7 +7,7 @@ A self-contained web security lab that simulates a multi-host NGINX reverse-prox
 <img width="1672" height="941" alt="187e8f86-2b3c-46f3-8795-263b9af31c52" src="https://github.com/user-attachments/assets/351194cb-6cf0-44cf-b33c-dbe87e41eb06" />
 
 ## Lab Architecture
-<img width="1599" height="984" alt="de15473a-be63-497b-8aea-caa32fe1de1e" src="https://github.com/user-attachments/assets/c264c857-05d3-4aaf-937a-edff041a1811" />
+<img width="1602" height="982" alt="b86b8bd5-0539-4aa3-bd17-f271d2d9e209" src="https://github.com/user-attachments/assets/746469d1-7b83-4885-a630-3a34af813675" />
 
 ## Misconfigurations / Exploit Chains Covered
 
@@ -106,3 +106,5 @@ https://blog.bugport.net/exploiting-http-parsers-inconsistencies
 https://tolo7010note.blogspot.com/2020/07/an-unreproducable-bug-due-to-load.html
 
 https://securitylabs.datadoghq.com/articles/web-traffic-hijacking-nginx-configuration-malicious/
+
+https://web.archive.org/web/20251129071946/https://bishopfox.com/blog/h2c-smuggling-request

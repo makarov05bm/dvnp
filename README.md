@@ -91,19 +91,19 @@ I welcome any suggestions or additions, fixes, etc. Feel free to open a PR, reac
 I hope you enjoy working through the lab, then I want to see you go hunt those boring NGINX servers that you were leaving for later :)
 
 ## References
-**Nginx directives list:** https://nginx.org/en/docs/dirindex.html
+**Nginx Directives Manual:** https://nginx.org/en/docs/dirindex.html
 
-**URL confusion bugs:** https://snyk.io/blog/url-confusion-vulnerabilities/#slash
+**URL Confusion Bugs:** https://snyk.io/blog/url-confusion-vulnerabilities/#slash
 
-**Detectify research vol.1:** https://blog.detectify.com/industry-insights/common-nginx-misconfigurations-that-leave-your-web-server-ope-to-attack/
+**Detectify Research:** https://blog.detectify.com/industry-insights/common-nginx-misconfigurations-that-leave-your-web-server-ope-to-attack/
 
-**Detectify research vol.2:** https://labs.detectify.com/ethical-hacking/middleware-middleware-everywhere-and-lots-of-misconfigurations-to-fix/
+**Detectify Research:** https://labs.detectify.com/ethical-hacking/middleware-middleware-everywhere-and-lots-of-misconfigurations-to-fix/
 
-**Hackricks wiki:**https://hacktricks.wiki/en/network-services-pentesting/pentesting-web/nginx.html
+**Hacktricks Wiki:** https://hacktricks.wiki/en/network-services-pentesting/pentesting-web/nginx.html
 
-**HTTP parsers inconsistencies:** https://blog.bugport.net/exploiting-http-parsers-inconsistencies
+**HTTP Parsers Inconsistencies:** https://blog.bugport.net/exploiting-http-parsers-inconsistencies
 
-**Weird open redirect:** https://tolo7010note.blogspot.com/2020/07/an-unreproducable-bug-due-to-load.html
+**Weird Open Redirect:** https://tolo7010note.blogspot.com/2020/07/an-unreproducable-bug-due-to-load.html
 
 **FrontJacking:** https://securitylabs.datadoghq.com/articles/web-traffic-hijacking-nginx-configuration-malicious/
 

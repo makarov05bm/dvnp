@@ -31,9 +31,10 @@ The lab chains together 20+ independent findings, spanning:
 16. Open Redirect via Missing Leading Slash in a Rewrite Capture Group
 17. Access Control Inconsistency due to auth_basic Not Inherited by a More-Specific Location
 18. Web Traffic Hijacking / Frontend Server Hijacking
-19. Authentication Bypass via satisfy any and a Broken IP Trust Boundary
-20. Credential Brute-Force via Missing Rate Limiting on Basic Auth
-21. Credential Reuse Across Trust Boundaries via a Shared .htpasswd File
+19. Request Smuggling Via HTTP/2 Cleartext (h2c)
+20. Authentication Bypass via satisfy any and a Broken IP Trust Boundary
+21. Credential Brute-Force via Missing Rate Limiting on Basic Auth
+22. Credential Reuse Across Trust Boundaries via a Shared .htpasswd File
 
 Some findings only become exploitable *because* of another misconfiguration elsewhere in the same config; part of the point of this lab is learning to spot those interaction effects, not just isolated bugs.
 

@@ -7,7 +7,7 @@ A self-contained web security lab that simulates a multi-host NGINX reverse-prox
 <img width="1672" height="941" alt="187e8f86-2b3c-46f3-8795-263b9af31c52" src="https://github.com/user-attachments/assets/351194cb-6cf0-44cf-b33c-dbe87e41eb06" />
 
 ## Lab Architecture
-<img width="1602" height="982" alt="9da54726-c949-4a10-b1c5-dd703d27cb2c" src="https://github.com/user-attachments/assets/5ce70bce-daf3-42e0-97db-b143d2f2def8" />
+<img width="1602" height="982" alt="e1988d88-75d7-4325-99e2-78b083a608b5" src="https://github.com/user-attachments/assets/a988c906-9a55-4379-bd85-03068493a899" />
 
 ## Misconfigurations / Exploit Chains Covered
 
@@ -91,20 +91,20 @@ I welcome any suggestions or additions, fixes, etc. Feel free to open a PR, reac
 I hope you enjoy working through the lab, then I want to see you go hunt those boring NGINX servers that you were leaving for later :)
 
 ## References
-https://nginx.org/en/docs/dirindex.html
+**Nginx directives list:** https://nginx.org/en/docs/dirindex.html
 
-https://snyk.io/blog/url-confusion-vulnerabilities/#slash
+**URL confusion bugs:** https://snyk.io/blog/url-confusion-vulnerabilities/#slash
 
-https://blog.detectify.com/industry-insights/common-nginx-misconfigurations-that-leave-your-web-server-ope-to-attack/
+**Detectify research vol.1:** https://blog.detectify.com/industry-insights/common-nginx-misconfigurations-that-leave-your-web-server-ope-to-attack/
 
-https://labs.detectify.com/ethical-hacking/middleware-middleware-everywhere-and-lots-of-misconfigurations-to-fix/
+**Detectify research vol.2:** https://labs.detectify.com/ethical-hacking/middleware-middleware-everywhere-and-lots-of-misconfigurations-to-fix/
 
-https://hacktricks.wiki/en/network-services-pentesting/pentesting-web/nginx.html#http2-upstream-request-injection-with-proxy_set_body
+**Hackricks wiki:**https://hacktricks.wiki/en/network-services-pentesting/pentesting-web/nginx.html
 
-https://blog.bugport.net/exploiting-http-parsers-inconsistencies
+**HTTP parsers inconsistencies:** https://blog.bugport.net/exploiting-http-parsers-inconsistencies
 
-https://tolo7010note.blogspot.com/2020/07/an-unreproducable-bug-due-to-load.html
+**Weird open redirect:** https://tolo7010note.blogspot.com/2020/07/an-unreproducable-bug-due-to-load.html
 
-https://securitylabs.datadoghq.com/articles/web-traffic-hijacking-nginx-configuration-malicious/
+**FrontJacking:** https://securitylabs.datadoghq.com/articles/web-traffic-hijacking-nginx-configuration-malicious/
 
-https://web.archive.org/web/20251129071946/https://bishopfox.com/blog/h2c-smuggling-request
+**H2CSmuggling:** https://web.archive.org/web/20251129071946/https://bishopfox.com/blog/h2c-smuggling-request

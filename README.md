@@ -48,6 +48,7 @@ git clone https://github.com/makarov05bm/dvnp.git
 sudo nano /etc/host
 
 127.0.0.1 portal.skyblue.com
+127.0.0.1 www.skyblue.com
 127.0.0.1 sandbox-dev-001.skyblue.com
 127.0.0.1 sandbox-dev-002.skyblue.com
 127.0.0.1 compromised.skyblue.com
